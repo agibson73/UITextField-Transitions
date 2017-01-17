@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UITextFieldFader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="fadingTextField" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KH7-lW-2Kx">
+                                <rect key="frame" x="0.0" y="60" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sPg-nA-utw"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldDidBeginEdit:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="HLu-Rg-X4O"/>
+                                    <action selector="textfieldDidEndEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="qsy-Kf-n8K"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="slidingTextfield" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pK-k9-z35">
+                                <rect key="frame" x="0.0" y="158" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BqL-3g-dFV"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldDidBeginEdit:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="HBE-2D-fLi"/>
+                                    <action selector="textfieldDidEndEdit:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="s5f-ak-GeA"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.019564839307492542" green="0.31774233469404528" blue="0.72336632013320923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3pK-k9-z35" firstAttribute="centerX" secondItem="KH7-lW-2Kx" secondAttribute="centerX" id="I2m-My-A2N"/>
+                            <constraint firstItem="3pK-k9-z35" firstAttribute="width" secondItem="KH7-lW-2Kx" secondAttribute="width" id="O2y-bf-KZ9"/>
+                            <constraint firstItem="KH7-lW-2Kx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j5U-WO-yJY"/>
+                            <constraint firstAttribute="trailing" secondItem="KH7-lW-2Kx" secondAttribute="trailing" id="lxq-lV-ulm"/>
+                            <constraint firstItem="3pK-k9-z35" firstAttribute="top" secondItem="KH7-lW-2Kx" secondAttribute="bottom" constant="38" id="mfV-mU-nvL"/>
+                            <constraint firstItem="3pK-k9-z35" firstAttribute="height" secondItem="KH7-lW-2Kx" secondAttribute="height" id="uLu-p1-5j1"/>
+                            <constraint firstItem="KH7-lW-2Kx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="xiJ-dg-47s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slidingTexfield" destination="3pK-k9-z35" id="P3y-5n-xXh"/>
+                        <outlet property="textField" destination="KH7-lW-2Kx" id="P97-Tp-EMj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
